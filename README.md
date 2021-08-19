@@ -28,11 +28,13 @@ C. Pre-requisites & Getting Started:
 
 - Download the chrome driver version supported by your browser. Create a folder called "chromedriver" under "C:\Users\yourusername\AppData\Local\Temp" & add the chrome driver version in this folder for the web browser to initiate. Make sure you name it as "chromedriver.exe"
 
+- Create a blank file named "username.txt" under the "C:\Users\yourusername\AppData\Local\Temp" directory
+
 - Install Microsoft visual studio 2019 (community edition will do)
 
 - Install SpecFlow for visual studio
 
-- Clone the bitbucket repo to your local machine
+- Clone the github repo to your local machine
 
 - Open the .sln file using visual studio 2019
 
@@ -42,7 +44,7 @@ D. Running Tests on Chrome:
 
 - Create a folder called "chromedriver" under "C:\Users\yourusername\AppData\Local\Temp" & add the chrome driver version supported by your browser in this folder for the web browser to initiate. Make sure you name it as "chromedriver.exe"
 
-- Right click on UITests in test explorer & click Run
+- Right click on UITests in test explorer, select all the tests & click Run
 
 E. Running Tests on Edge:
 
@@ -50,26 +52,10 @@ E. Running Tests on Edge:
 
 - Create a folder called "MicrosoftWebDriver" under "C:\Users\yourusername\AppData\Local\Temp" & add the chrome driver version supported by your browser in this folder for the web browser to initiate. Make sure you name it as "MicrosoftWebDriver.exe"
 
-- Right click on UITests in test explorer & click Run
+- Right click on UITests in test explorer, select all the tests & click Run
 
 F. Running Tests in Headless Mode:
 
 - Add the tag @Headless in SpecFlow on top of scenario every scenario. This is because specflow does not support feature level tags (https://github.com/SpecFlowOSS/SpecFlow/issues/2024)
 
-- Right click on UITests in test explorer & click Run
-
-G. Troubleshooting:
-
-If the webdriver does not start for some reason & the tests timeout in a few milliseconds:
-
-- Option 1:
-Close Visual Studio 2019 & close the project folder on your machine. Then open the project folder again & open the .sln file with Visual Studio 2019.
-
-- Option 2:
-Delete the .exe file from your 'Temp' folder & paste the .exe file again from another folder. Then run the tests again.
-
-- Option 3:
-Restart the machine. Open the project, clean the solution & run the tests again.
-
-NB: Please try Option 1 or Option 2 first. If it does not work, then try either Option 3.
-In a rare occasion, if there is a webdriver timeout when test runs are in progress, then clean the solution & rerun the tests again.
+- Right click on UITests in test explorer, select all the tests & click Run
