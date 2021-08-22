@@ -35,8 +35,7 @@ namespace UITests.Steps
         [When(@"I add my details")]
         public void WhenIAddMyDetails()
         {
-            var filepath = Path.GetFileName("username.txt");
-            StreamWriter writer = new StreamWriter(filepath);
+            StreamWriter writer = new StreamWriter("..//username.txt");
             Random rnd = new Random();
             int number = rnd.Next(0, 1000000);
             var randomuser = "username" + number + "@gmail.com";
@@ -101,8 +100,7 @@ namespace UITests.Steps
         public void GivenILoginToTheApplication()
         {
             Assert.IsTrue(po.loginbtn.Text.Contains(read.jsonReader("../UITests/Data/TestData.json", "logintxt")), "Text does not match as expected");
-            var filepath = Path.GetFileName("username.txt");
-            StreamReader reader = new StreamReader(filepath);
+            StreamReader reader = new StreamReader("..//username.txt");
             var result = reader.ReadToEnd();
             po.loginusrtxt.SendKeys(result);
             po.loginpwdtxt.SendKeys(read.jsonReader("../UITests/Data/TestData.json", "password"));

@@ -28,8 +28,6 @@ C. Pre-requisites & Getting Started:
 
 - Download the chrome driver version supported by your browser. Create a folder called "chromedriver" under "C:\Users\yourusername\AppData\Local\Temp" & add the chrome driver version in this folder for the web browser to initiate. Make sure you name it as "chromedriver.exe"
 
-- Create a blank file named "username.txt" under the "C:\Users\yourusername\AppData\Local\Temp" directory
-
 - Install Microsoft visual studio 2019 (community edition will do)
 
 - Install SpecFlow for visual studio
@@ -59,3 +57,8 @@ F. Running Tests in Headless Mode:
 - Add the tag @Headless in SpecFlow on top of scenario every scenario. This is because specflow does not support feature level tags (https://github.com/SpecFlowOSS/SpecFlow/issues/2024)
 
 - Right click on UITests in test explorer, select all the tests & click Run
+
+F. Troubleshooting:
+
+- If you are using Visual studio 2019 community edition please open visual studio first. Then Go to File > Open Project or solution and choose the .sln file from your directory. 
+PS: Opening the folder and double clicking to open the solution may cause the web drivers to fail as there is an issue with the community edition of visual studio ().
