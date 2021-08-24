@@ -79,10 +79,8 @@ namespace UITests.Steps
             Assert.IsTrue(po.brandlbl.Text.Contains(read.jsonReader("../UITests/Data/TestData.json", "brandlbl")), "Text does not match as expected");
             Assert.IsTrue(po.imgmain.Displayed, "Image does not exist");
             wait.Until(Driver => Driver.FindElement(By.XPath("/html/body/my-app/div/main/my-home/div/div[1]/div/a/img")).Displayed);
-            //Sleep(2);
             Assert.IsTrue(po.img1.Displayed, "Image does not exist");
             wait.Until(Driver => Driver.FindElement(By.XPath("/html/body/my-app/div/main/my-home/div/div[2]/div/a/img")).Displayed);
-            //Sleep(2);
             Assert.IsTrue(po.img2.Displayed, "Image does not exist");
             wait.Until(Driver => Driver.FindElement(By.XPath("/html/body/my-app/div/main/my-home/div/div[3]/div/a/img")).Displayed);
             Assert.IsTrue(po.img3.Displayed, "Image does not exist");
@@ -111,7 +109,6 @@ namespace UITests.Steps
         public void GivenISelectMyFavoriteCar()
         {
             wait.Until(Driver => Driver.FindElement(By.XPath("/html/body/my-app/div/main/my-home/div/div[3]/div/a/img")).Displayed);
-            //Sleep(2);
             Assert.IsTrue(po.img3.Displayed, "Image is not displayed");
             po.img3.Click();
             Assert.IsTrue(po.firstvote.Displayed, "Image is not displayed");
@@ -206,7 +203,6 @@ namespace UITests.Steps
         [When(@"I proceed to vote")]
         public void WhenIProceedToVote()
         {
-            //Sleep(2);
             wait.Until(Driver => Driver.FindElement(By.XPath("/html/body/my-app/div/main/my-home/div/div[3]/div/a/img")).Displayed);
             Assert.IsTrue(po.img3.Displayed, "Image is not displayed");
             po.img3.Click();
