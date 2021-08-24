@@ -78,19 +78,19 @@ namespace UITests.Steps
             Driver.Navigate().GoToUrl(read.jsonReader("../UITests/Data/TestData.json", "url"));
             Assert.IsTrue(po.brandlbl.Text.Contains(read.jsonReader("../UITests/Data/TestData.json", "brandlbl")), "Text does not match as expected");
             Assert.IsTrue(po.imgmain.Displayed, "Image does not exist");
-            //wait.Until(Driver => Driver.FindElement(By.XPath("/html/body/my-app/div/main/my-home/div/div[1]/div/a/img")));
-            Sleep(2);
+            wait.Until(Driver => Driver.FindElement(By.XPath("/html/body/my-app/div/main/my-home/div/div[1]/div/a/img")).Displayed);
+            //Sleep(2);
             Assert.IsTrue(po.img1.Displayed, "Image does not exist");
-            //wait.Until(Driver => Driver.FindElement(By.XPath("/html/body/my-app/div/main/my-home/div/div[2]/div/a/img")));
-            Sleep(2);
+            wait.Until(Driver => Driver.FindElement(By.XPath("/html/body/my-app/div/main/my-home/div/div[2]/div/a/img")).Displayed);
+            //Sleep(2);
             Assert.IsTrue(po.img2.Displayed, "Image does not exist");
-            wait.Until(Driver => Driver.FindElement(By.XPath("/html/body/my-app/div/main/my-home/div/div[3]/div/a/img")));
+            wait.Until(Driver => Driver.FindElement(By.XPath("/html/body/my-app/div/main/my-home/div/div[3]/div/a/img")).Displayed);
             Assert.IsTrue(po.img3.Displayed, "Image does not exist");
-            wait.Until(Driver => Driver.FindElement(By.XPath("/html/body/my-app/div/main/my-home/div/div[1]/div/h2")));
+            wait.Until(Driver => Driver.FindElement(By.XPath("/html/body/my-app/div/main/my-home/div/div[1]/div/h2")).Displayed);
             Assert.IsTrue(po.txt1.Text.Contains(read.jsonReader("../UITests/Data/TestData.json", "txt1")), "Text does not match as expected");
-            wait.Until(Driver => Driver.FindElement(By.XPath("/html/body/my-app/div/main/my-home/div/div[2]/div/h2")));
+            wait.Until(Driver => Driver.FindElement(By.XPath("/html/body/my-app/div/main/my-home/div/div[2]/div/h2")).Displayed);
             Assert.IsTrue(po.txt2.Text.Contains(read.jsonReader("../UITests/Data/TestData.json", "txt2")), "Text does not match as expected");
-            wait.Until(Driver => Driver.FindElement(By.XPath("/html/body/my-app/div/main/my-home/div/div[3]/div/h2")));
+            wait.Until(Driver => Driver.FindElement(By.XPath("/html/body/my-app/div/main/my-home/div/div[3]/div/h2")).Displayed);
             Assert.IsTrue(po.txt3.Text.Contains(read.jsonReader("../UITests/Data/TestData.json", "txt3")), "Text does not match as expected");
             
         }
@@ -110,8 +110,8 @@ namespace UITests.Steps
         [Given(@"I select my favorite car")]
         public void GivenISelectMyFavoriteCar()
         {
-            //wait.Until(Driver => Driver.FindElement(By.XPath("/html/body/my-app/div/main/my-home/div/div[3]/div/a/img")));
-            Sleep(2);
+            wait.Until(Driver => Driver.FindElement(By.XPath("/html/body/my-app/div/main/my-home/div/div[3]/div/a/img")).Displayed);
+            //Sleep(2);
             Assert.IsTrue(po.img3.Displayed, "Image is not displayed");
             po.img3.Click();
             Assert.IsTrue(po.firstvote.Displayed, "Image is not displayed");
@@ -126,7 +126,7 @@ namespace UITests.Steps
             po.votingtxtfield.SendKeys(read.jsonReader("../UITests/Data/TestData.json", "carvoting"));
             Assert.IsTrue(po.votingbtn.Text.Contains(read.jsonReader("../UITests/Data/TestData.json", "votetxt")), "Text does not match as expected");
             po.votingbtn.Click();
-            wait.Until(Driver => Driver.FindElement(By.CssSelector("p.card-text")));
+            wait.Until(Driver => Driver.FindElement(By.CssSelector("p.card-text")).Displayed);
             var j = Driver.FindElement(By.XPath("/html/body/my-app/div/main/my-model/div/div[1]/div[3]/div[2]/div[1]/h4/strong")).Text;
             Assert.Greater(j, i);
         }
@@ -143,7 +143,7 @@ namespace UITests.Steps
         public void GivenIclickonthelistofcars()
         {
             po.img3.Click();
-            wait.Until(Driver => Driver.FindElement(By.XPath("/html/body/my-app/div/main/my-overall/div/div/table")));
+            wait.Until(Driver => Driver.FindElement(By.XPath("/html/body/my-app/div/main/my-overall/div/div/table")).Displayed);
             Assert.IsTrue(po.car.Text.Contains(read.jsonReader("../UITests/Data/TestData.json", "car1")), "Text does not match as expected");
             Assert.IsTrue(po.model.Text.Contains(read.jsonReader("../UITests/Data/TestData.json", "model1")), "Text does not match as expected");
             Assert.IsTrue(po.rank.Text.Contains(read.jsonReader("../UITests/Data/TestData.json", "rank1")), "Text does not match as expected");
@@ -155,16 +155,16 @@ namespace UITests.Steps
         public void WhenITraverseForwardThroughThePages()
         {
             po.forward.Click();
-            wait.Until(Driver => Driver.FindElement(By.XPath("/html/body/my-app/div/main/my-overall/div/div/table")));
+            wait.Until(Driver => Driver.FindElement(By.XPath("/html/body/my-app/div/main/my-overall/div/div/table")).Displayed);
             
             po.forward.Click();
-            wait.Until(Driver => Driver.FindElement(By.XPath("/html/body/my-app/div/main/my-overall/div/div/table")));
+            wait.Until(Driver => Driver.FindElement(By.XPath("/html/body/my-app/div/main/my-overall/div/div/table")).Displayed);
             
             po.forward.Click();
-            wait.Until(Driver => Driver.FindElement(By.XPath("/html/body/my-app/div/main/my-overall/div/div/table")));
+            wait.Until(Driver => Driver.FindElement(By.XPath("/html/body/my-app/div/main/my-overall/div/div/table")).Displayed);
             
             po.forward.Click();
-            wait.Until(Driver => Driver.FindElement(By.XPath("/html/body/my-app/div/main/my-overall/div/div/table")));
+            wait.Until(Driver => Driver.FindElement(By.XPath("/html/body/my-app/div/main/my-overall/div/div/table")).Displayed);
             
 
         }
@@ -173,16 +173,16 @@ namespace UITests.Steps
         public void WhenITraverseBackThroughThePages()
         {
             po.backward.Click();
-            wait.Until(Driver => Driver.FindElement(By.XPath("/html/body/my-app/div/main/my-overall/div/div/table")));
+            wait.Until(Driver => Driver.FindElement(By.XPath("/html/body/my-app/div/main/my-overall/div/div/table")).Displayed);
 
             po.backward.Click();
-            wait.Until(Driver => Driver.FindElement(By.XPath("/html/body/my-app/div/main/my-overall/div/div/table")));
+            wait.Until(Driver => Driver.FindElement(By.XPath("/html/body/my-app/div/main/my-overall/div/div/table")).Displayed);
 
             po.backward.Click();
-            wait.Until(Driver => Driver.FindElement(By.XPath("/html/body/my-app/div/main/my-overall/div/div/table")));
+            wait.Until(Driver => Driver.FindElement(By.XPath("/html/body/my-app/div/main/my-overall/div/div/table")).Displayed);
 
             po.backward.Click();
-            wait.Until(Driver => Driver.FindElement(By.XPath("/html/body/my-app/div/main/my-overall/div/div/table")));
+            wait.Until(Driver => Driver.FindElement(By.XPath("/html/body/my-app/div/main/my-overall/div/div/table")).Displayed);
 
         }
 
@@ -206,7 +206,8 @@ namespace UITests.Steps
         [When(@"I proceed to vote")]
         public void WhenIProceedToVote()
         {
-            Sleep(2);
+            //Sleep(2);
+            wait.Until(Driver => Driver.FindElement(By.XPath("/html/body/my-app/div/main/my-home/div/div[3]/div/a/img")).Displayed);
             Assert.IsTrue(po.img3.Displayed, "Image is not displayed");
             po.img3.Click();
             Assert.IsTrue(po.firstvote.Displayed, "Image is not displayed");
