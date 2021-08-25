@@ -1,5 +1,6 @@
 {
   "url": "https://buggy.justtestit.org/",
+  "urluat": "https://buggy.justtestit.org/",
   "registry": "Register",
   "loginlbl": "Login",
   "registrytitle": "Register with Buggy Cars Rating",
@@ -22,8 +23,8 @@
   "rank1": "5",
   "engine1": "2.0l",
   "carvoting": "Testing",
-  "votetxt":  "Vote!",
+  "votetxt": "Vote!",
   "votingmsg": "Thank you for your vote!",
-  "viewmore":  "View more",
-  "logout":  "Logout"
+  "viewmore": "View more",
+  "logout": "Logout"
 }

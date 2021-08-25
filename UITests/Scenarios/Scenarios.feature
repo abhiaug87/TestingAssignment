@@ -2,6 +2,7 @@
 The top 5 critical functionalities for buggy car are Register, Login, Traverse, Vote & Logout.
 These have been combined in the following scenarios. 
 
+@test
 @basic
 @Headless
 Scenario: First time user - Registration Flow
@@ -10,6 +11,7 @@ Scenario: First time user - Registration Flow
 	When I add my details
 	Then I am registered successfully
 
+@test
 @alt
 @Headless
 Scenario: Cancel out of the Registration flow
@@ -18,6 +20,7 @@ Scenario: Cancel out of the Registration flow
 	When I click cancel
 	Then I am redirected to the main page
 
+@test
 @basic
 @Headless
 Scenario: First Vote for favorite car
@@ -27,6 +30,7 @@ Scenario: First Vote for favorite car
 	When I cast a vote for my favorite car
 	Then I am able to see the appropriate message
 
+@test
 @alt
 @Headless
 Scenario: Revote favourite car
@@ -35,6 +39,7 @@ Scenario: Revote favourite car
 	And I select my favorite car
 	Then I am able to see the appropriate message
 
+@test
 @basic
 @Headless
 Scenario: Traverse through pages and logout

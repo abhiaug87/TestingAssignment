@@ -6,6 +6,7 @@ using TechTalk.SpecFlow;
 using UITests.PageObjects;
 using System;
 using System.IO;
+using System.Linq;
 
 namespace UITests.Steps
 {
@@ -21,7 +22,14 @@ namespace UITests.Steps
         [Given(@"I am on the main page")]
         public void GivenIAmOnTheMainPage()
         {
-            Driver.Navigate().GoToUrl(read.jsonReader("../UITests/Data/TestData.json", "url"));
+            if (ScenarioContext.Current.ScenarioInfo.Tags.Contains("test"))
+            {
+                Driver.Navigate().GoToUrl(read.jsonReader("../UITests/Data/TestData.json", "url"));
+            }
+            else if (ScenarioContext.Current.ScenarioInfo.Tags.Contains("uat"))
+            {
+                Driver.Navigate().GoToUrl(read.jsonReader("../UITests/Data/TestData.json", "urluat"));
+            }
         }
 
         [Given(@"I want to register")]
