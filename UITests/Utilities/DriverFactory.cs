@@ -2,9 +2,12 @@
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.Edge;
+using NUnit.Framework;
 
 namespace UITests.Utilities
 {
+    [TestFixture(typeof(ChromeDriver))]
+    [TestFixture(typeof(EdgeDriver))]
     public class DriverFactory
     {
         public static IWebDriver InitiateWebDriver(string browser)
@@ -30,6 +33,28 @@ namespace UITests.Utilities
             {
                 driver = new EdgeDriver(CommonConstants.DriverSettings.BinaryLocationEdge);
             }
+
+            //switch(browser)
+            //{
+            //    case "Headless":
+
+            //        browser.Equals(CommonConstants.DriverSettings.HeadlessBrowser);
+            //        driver = new ChromeDriver(CommonConstants.DriverSettings.BinaryLocationChrome, chromeOptions);
+            //        break;
+
+            //    case "Chrome":
+
+            //        browser.Equals(CommonConstants.DriverSettings.EdgeBrowser);
+            //        driver = new ChromeDriver(CommonConstants.DriverSettings.BinaryLocationEdge);
+            //        break;
+
+            //    case "Edge":
+
+            //        browser.Equals(CommonConstants.DriverSettings.ChromeBrowser);
+            //        driver = new ChromeDriver(CommonConstants.DriverSettings.BinaryLocationChrome);
+            //        break;
+
+            //}
 
             driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(CommonConstants.DriverSettings.DefaultWaitTime);
             driver.Manage().Window.Maximize();

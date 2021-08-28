@@ -7,11 +7,15 @@ using UITests.PageObjects;
 using System;
 using System.IO;
 using System.Linq;
+using OpenQA.Selenium.Chrome;
+using OpenQA.Selenium.Edge;
 
 namespace UITests.Steps
 {
     [Binding]
-
+    [TestFixture(typeof(ChromeDriver))]
+    [TestFixture(typeof(EdgeDriver))]
+    [Parallelizable]
     public class Stepdefinition : BaseClass
     {
         Pageobjects po = new Pageobjects(Driver);
