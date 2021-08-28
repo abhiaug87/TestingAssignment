@@ -22,14 +22,7 @@ namespace UITests.Steps
         [Given(@"I am on the main page")]
         public void GivenIAmOnTheMainPage()
         {
-            if (ScenarioContext.Current.ScenarioInfo.Tags.Contains("test"))
-            {
                 Driver.Navigate().GoToUrl(read.jsonReader("../UITests/Data/TestData.json", "url"));
-            }
-            else if (ScenarioContext.Current.ScenarioInfo.Tags.Contains("uat"))
-            {
-                Driver.Navigate().GoToUrl(read.jsonReader("../UITests/Data/TestData.json", "urluat"));
-            }
         }
 
         [Given(@"I want to register")]
