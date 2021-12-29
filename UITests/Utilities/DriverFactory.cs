@@ -3,6 +3,7 @@ using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.Edge;
 using NUnit.Framework;
+using OpenQA.Selenium.Firefox;
 
 namespace UITests.Utilities
 {
@@ -25,36 +26,18 @@ namespace UITests.Utilities
             {
                 driver = new ChromeDriver(CommonConstants.DriverSettings.BinaryLocationChrome, chromeOptions);
             }
-            else if (browser.Equals(CommonConstants.DriverSettings.ChromeBrowser))
+            if (browser.Equals(CommonConstants.DriverSettings.ChromeBrowser))
             {
                 driver = new ChromeDriver(CommonConstants.DriverSettings.BinaryLocationChrome);
             }
-            else if (browser.Equals(CommonConstants.DriverSettings.EdgeBrowser))
+            if (browser.Equals(CommonConstants.DriverSettings.EdgeBrowser))
             {
                 driver = new EdgeDriver(CommonConstants.DriverSettings.BinaryLocationEdge);
             }
-
-            //switch(browser)
-            //{
-            //    case "Headless":
-
-            //        browser.Equals(CommonConstants.DriverSettings.HeadlessBrowser);
-            //        driver = new ChromeDriver(CommonConstants.DriverSettings.BinaryLocationChrome, chromeOptions);
-            //        break;
-
-            //    case "Chrome":
-
-            //        browser.Equals(CommonConstants.DriverSettings.EdgeBrowser);
-            //        driver = new ChromeDriver(CommonConstants.DriverSettings.BinaryLocationEdge);
-            //        break;
-
-            //    case "Edge":
-
-            //        browser.Equals(CommonConstants.DriverSettings.ChromeBrowser);
-            //        driver = new ChromeDriver(CommonConstants.DriverSettings.BinaryLocationChrome);
-            //        break;
-
-            //}
+            else if (browser.Equals(CommonConstants.DriverSettings.FireFoxBrowser))
+            {
+                driver = new FirefoxDriver(CommonConstants.DriverSettings.BinaryLocationFireFox);
+            }
 
             driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(CommonConstants.DriverSettings.DefaultWaitTime);
             driver.Manage().Window.Maximize();

@@ -24,6 +24,10 @@ namespace UITests.Utilities
             {
                 Driver = DriverFactory.InitiateWebDriver(CommonConstants.DriverSettings.EdgeBrowser);
             }
+            if (ScenarioContext.Current.ScenarioInfo.Tags.Contains("FireFox"))
+            {
+                Driver = DriverFactory.InitiateWebDriver(CommonConstants.DriverSettings.FireFoxBrowser);
+            }
             else if (ScenarioContext.Current.ScenarioInfo.Tags.Contains("Headless"))
             {
                 Driver = DriverFactory.InitiateWebDriver(CommonConstants.DriverSettings.HeadlessBrowser);

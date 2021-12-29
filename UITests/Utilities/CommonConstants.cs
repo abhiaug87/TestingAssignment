@@ -7,16 +7,21 @@ namespace UITests.Utilities
         public static class DriverSettings
         {
             // running tests on chrome
-            public static string filepathchrome = Path.GetFullPath("Driver"); // Create a folder called "chromedriver" under "C:\Users\yourusername\AppData\Local\Temp" & add the chrome driver version supported by your browser in this folder for the web browser to initiate. Make sure you name it as chromedriver.exe
-            public static string BinaryLocationChrome = filepathchrome;
+            public static string filepath = Path.GetFullPath("Driver"); 
+            public static string BinaryLocationChrome = filepath;
 
             // running tests on edge
-            public static string filepathedge = Path.GetFullPath("Driver"); // Create a folder called "MicrosoftWebDriver" under "C:\Users\yourusername\AppData\Local\Temp" & add the chrome driver version supported by your browser in this folder for the web browser to initiate. Make sure you name it as MicrosoftWebDriver.exe
-            public static string BinaryLocationEdge = filepathedge;
+
+            public static string BinaryLocationEdge = filepath;
+
+            // running tests on edge
+
+            public static string BinaryLocationFireFox = filepath;
 
             public static string ChromeBrowser = "Chrome";
             public static string EdgeBrowser = "Edge";
             public static string HeadlessBrowser = "Headless";
+            public static string FireFoxBrowser = "FireFox";
             public static int DefaultWaitTime = 3000;
         }
     }
