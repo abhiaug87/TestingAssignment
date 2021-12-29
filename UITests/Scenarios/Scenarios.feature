@@ -4,7 +4,6 @@ These have been combined in the following scenarios.
 
 @test
 @basic
-@Chrome
 @Edge
 Scenario: First time user - Registration Flow
 	Given I am on the main page
@@ -14,7 +13,6 @@ Scenario: First time user - Registration Flow
 
 @test
 @alt
-@Chrome
 @Edge
 Scenario: Cancel out of the Registration flow
 	Given I am on the main page
@@ -24,7 +22,6 @@ Scenario: Cancel out of the Registration flow
 
 @test
 @basic
-@Chrome
 @Edge
 Scenario: First Vote for favorite car
 	Given I am on the main page
@@ -35,7 +32,6 @@ Scenario: First Vote for favorite car
 
 @test
 @alt
-@Chrome
 @Edge
 Scenario: Revote favourite car
 	Given I am on the main page
@@ -45,7 +41,6 @@ Scenario: Revote favourite car
 
 @test
 @basic
-@Chrome
 @Edge
 Scenario: Traverse through pages and logout
 	Given I am on the main page
@@ -55,3 +50,12 @@ Scenario: Traverse through pages and logout
 	And I traverse back through the pages
 	Then I am able to see the different cars
 	And I logout of the application
+
+@Edge
+Scenario: YCreate User
+	Given I create a user
+
+@Edge
+Scenario: ZPurchase an Org
+	When I am on the Login page
+	Then I can purchase a subscription

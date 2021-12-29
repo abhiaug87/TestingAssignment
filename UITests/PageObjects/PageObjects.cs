@@ -130,5 +130,70 @@ namespace UITests.PageObjects
         [FindsBy(How = How.XPath, Using = "/html/body/my-app/div/main/my-overall/div/div/table/tbody/tr[1]/td[7]/a")]
         public IWebElement viewmore;
 
+        [FindsBy(How = How.Id, Using = "xl-form-email")]
+        public IWebElement email;
+
+        [FindsBy(How = How.Id, Using = "xl-form-password")]
+        public IWebElement pass;
+
+        [FindsBy(How = How.Id, Using = "xl-form-submit")]
+        public IWebElement loginbutton;
+
+        [FindsBy(How = How.XPath, Using = "//*[@id='react-app']/header/div/div[2]/div/div/button")]
+        public IWebElement addorg;
+
+        [FindsBy(How = How.Name, Using = "OrganisationName")]
+        public IWebElement orgname;
+
+        [FindsBy(How = How.XPath, Using = "//*[@id='industrysearchcombofield-1025-inputEl']")]
+        public IWebElement select;
+
+        [FindsBy(How = How.Id, Using = "simplebutton-1035")]
+        public IWebElement buynow;
+
+        [FindsBy(How = How.XPath, Using = "//*[@id='react-app']/div/div[2]/div[2]/div/footer/button")]
+        public IWebElement proceed;
+
+        [FindsBy(How = How.XPath, Using = "//*[@id='react-app']/div/div[2]/div[2]/div/footer/button[1]")]
+        public IWebElement proceed2;
+
+        [FindsBy(How = How.XPath, Using = "//*[@id='react-app']/div/div[2]/div[1]/div/div/div[1]/label/div/div")]
+        public IWebElement ba;
+
+        [FindsBy(How = How.XPath, Using = "//*[@id='react-app']/section/div[1]/div[4]/a")]
+        public IWebElement done;
+
+        [FindsBy(How = How.CssSelector, Using = "button[data-automationid='payment-confirm-button']")]
+        public IWebElement label;
+
+        [FindsBy(How = How.CssSelector, Using = "button[data-automationid='continueButton']")]
+        public IWebElement cont;
+
+        [FindsBy(How = How.Id, Using = "FirstName")]
+        public IWebElement fname;
+
+        [FindsBy(How = How.Id, Using = "LastName")]
+        public IWebElement lname;
+
+        [FindsBy(How = How.Id, Using = "EmailAddress")]
+        public IWebElement emailid;
+
+        [FindsBy(How = How.Id, Using = "PhoneNumber")]
+        public IWebElement phone;
+
+        [FindsBy(How = How.Id, Using = "LocationCode")]
+        public IWebElement location;
+
+        [FindsBy(How = How.CssSelector, Using = "div.recaptcha-checkbox-border")]
+        public IWebElement captcha;
+
+        [FindsBy(How = How.Id, Using = "TermsAccepted")]
+        public IWebElement terms;
+
+        [FindsBy(How = How.Id, Using = "submitButton")]
+        public IWebElement create;
+
     }
+
+
 }

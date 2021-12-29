@@ -74,25 +74,23 @@ namespace UITests.Scenarios
         [NUnit.Framework.DescriptionAttribute("First time user - Registration Flow")]
         [NUnit.Framework.CategoryAttribute("test")]
         [NUnit.Framework.CategoryAttribute("basic")]
-        [NUnit.Framework.CategoryAttribute("Chrome")]
         [NUnit.Framework.CategoryAttribute("Edge")]
         public virtual void FirstTimeUser_RegistrationFlow()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("First time user - Registration Flow", null, new string[] {
                         "test",
                         "basic",
-                        "Chrome",
                         "Edge"});
-#line 9
+#line 8
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
-#line 10
+#line 9
  testRunner.Given("I am on the main page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 11
+#line 10
  testRunner.And("I want to register", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 12
+#line 11
  testRunner.When("I add my details", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 13
+#line 12
  testRunner.Then("I am registered successfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -102,25 +100,23 @@ this.ScenarioInitialize(scenarioInfo);
         [NUnit.Framework.DescriptionAttribute("Cancel out of the Registration flow")]
         [NUnit.Framework.CategoryAttribute("test")]
         [NUnit.Framework.CategoryAttribute("alt")]
-        [NUnit.Framework.CategoryAttribute("Chrome")]
         [NUnit.Framework.CategoryAttribute("Edge")]
         public virtual void CancelOutOfTheRegistrationFlow()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Cancel out of the Registration flow", null, new string[] {
                         "test",
                         "alt",
-                        "Chrome",
                         "Edge"});
-#line 19
+#line 17
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
-#line 20
+#line 18
  testRunner.Given("I am on the main page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 21
+#line 19
  testRunner.And("I want to register", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 22
+#line 20
  testRunner.When("I click cancel", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 23
+#line 21
  testRunner.Then("I am redirected to the main page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -130,27 +126,25 @@ this.ScenarioInitialize(scenarioInfo);
         [NUnit.Framework.DescriptionAttribute("First Vote for favorite car")]
         [NUnit.Framework.CategoryAttribute("test")]
         [NUnit.Framework.CategoryAttribute("basic")]
-        [NUnit.Framework.CategoryAttribute("Chrome")]
         [NUnit.Framework.CategoryAttribute("Edge")]
         public virtual void FirstVoteForFavoriteCar()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("First Vote for favorite car", null, new string[] {
                         "test",
                         "basic",
-                        "Chrome",
                         "Edge"});
-#line 29
+#line 26
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
-#line 30
+#line 27
  testRunner.Given("I am on the main page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 31
+#line 28
  testRunner.And("I login to the application", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 32
+#line 29
  testRunner.And("I select my favorite car", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 33
+#line 30
  testRunner.When("I cast a vote for my favorite car", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 34
+#line 31
  testRunner.Then("I am able to see the appropriate message", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -160,25 +154,23 @@ this.ScenarioInitialize(scenarioInfo);
         [NUnit.Framework.DescriptionAttribute("Revote favourite car")]
         [NUnit.Framework.CategoryAttribute("test")]
         [NUnit.Framework.CategoryAttribute("alt")]
-        [NUnit.Framework.CategoryAttribute("Chrome")]
         [NUnit.Framework.CategoryAttribute("Edge")]
         public virtual void RevoteFavouriteCar()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Revote favourite car", null, new string[] {
                         "test",
                         "alt",
-                        "Chrome",
                         "Edge"});
-#line 40
+#line 36
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
-#line 41
+#line 37
  testRunner.Given("I am on the main page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 42
+#line 38
  testRunner.And("I login to the application", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 43
+#line 39
  testRunner.And("I select my favorite car", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 44
+#line 40
  testRunner.Then("I am able to see the appropriate message", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -188,32 +180,64 @@ this.ScenarioInitialize(scenarioInfo);
         [NUnit.Framework.DescriptionAttribute("Traverse through pages and logout")]
         [NUnit.Framework.CategoryAttribute("test")]
         [NUnit.Framework.CategoryAttribute("basic")]
-        [NUnit.Framework.CategoryAttribute("Chrome")]
         [NUnit.Framework.CategoryAttribute("Edge")]
         public virtual void TraverseThroughPagesAndLogout()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Traverse through pages and logout", null, new string[] {
                         "test",
                         "basic",
-                        "Chrome",
                         "Edge"});
-#line 50
+#line 45
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
-#line 51
+#line 46
  testRunner.Given("I am on the main page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 52
+#line 47
  testRunner.And("I login to the application", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 53
+#line 48
  testRunner.And("I click on the list of cars", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 54
+#line 49
  testRunner.When("I traverse forward through the pages", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 55
+#line 50
  testRunner.And("I traverse back through the pages", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 56
+#line 51
  testRunner.Then("I am able to see the different cars", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 57
+#line 52
  testRunner.And("I logout of the application", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("YCreate User")]
+        [NUnit.Framework.CategoryAttribute("Edge")]
+        public virtual void YCreateUser()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("YCreate User", null, new string[] {
+                        "Edge"});
+#line 55
+this.ScenarioInitialize(scenarioInfo);
+            this.ScenarioStart();
+#line 56
+ testRunner.Given("I create a user", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("ZPurchase an Org")]
+        [NUnit.Framework.CategoryAttribute("Edge")]
+        public virtual void ZPurchaseAnOrg()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("ZPurchase an Org", null, new string[] {
+                        "Edge"});
+#line 59
+this.ScenarioInitialize(scenarioInfo);
+            this.ScenarioStart();
+#line 60
+ testRunner.When("I am on the Login page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 61
+ testRunner.Then("I can purchase a subscription", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
