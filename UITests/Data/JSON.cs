@@ -7,12 +7,12 @@ namespace UITests.Data
 {
     class JSON
     {
+        private readonly string filepath = "../UITests/Data/";
+
         public string jsonReader(string fileName, object itemName)
         {
-            string pth = System.Reflection.Assembly.GetCallingAssembly().CodeBase;
-            string actualPath = pth.Substring(0, pth.LastIndexOf("bin"));
-            string projectPath = new Uri(actualPath).LocalPath;
-            string reportPath = projectPath + fileName;
+            string reportPath = filepath + fileName;
+
 
             // read JSON directly from a file
             StreamReader file = File.OpenText(reportPath);
