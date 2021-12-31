@@ -42,8 +42,10 @@ namespace UITests.Steps
         {
             StreamWriter writer = new StreamWriter("..//username.txt");
             Random rnd = new Random();
+            string chars = "$%#@!*abcdefghijklmnopqrstuvwxyz?;:ABCDEFGHIJKLMNOPQRSTUVWXYZ^&";
             int number = rnd.Next(0, 1000000);
-            var randomuser = "username" + number + "@gmail.com";
+            char rc = (char)rnd.Next(chars.Length);
+            var randomuser = "username" + number + rc + "@gmail.com";
             Assert.IsTrue(po.registry.Text.Contains(read.jsonReader("TestData.json", "registry")), "Text does not match as expected");
             Assert.IsTrue(po.registrytitle.Text.Contains(read.jsonReader("TestData.json", "registrytitle")), "Text does not match as expected");
             Assert.IsTrue(po.loginlbl.Text.Contains(read.jsonReader("TestData.json", "loginlbl")), "Text does not match as expected");
