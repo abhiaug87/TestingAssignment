@@ -6,7 +6,6 @@ using TechTalk.SpecFlow;
 using UITests.PageObjects;
 using System;
 using System.IO;
-using System.Linq;
 using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.Edge;
 
