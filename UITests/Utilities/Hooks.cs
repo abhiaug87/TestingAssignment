@@ -39,10 +39,10 @@ namespace UITests.Utilities
         {
             if (NUnit.Framework.TestContext.CurrentContext.Result.Outcome != ResultState.Success)
             {
-                var p = Environment.CurrentDirectory;
+                var p = Directory.GetParent(NUnit.Framework.TestContext.CurrentContext.TestDirectory).Parent.FullName;
                 var dir = $@"{p}/Screenshots";
                 Directory.CreateDirectory(dir);
-                string pathfile = Path.Combine(Environment.CurrentDirectory + @"//Screenshots", "Screenshot.JPG" + "_" + DateTime.Now.ToString("(dd_MMMM_hh_mm_ss_tt)"));
+                string pathfile = Path.Combine(p + @"\\Screenshots", "Screenshot" + "_" + DateTime.Now.ToString("(dd_MMMM_hh_mm_ss_tt).JPG"));
                 var screenshot = Driver.TakeScreenshot();
                 screenshot.SaveAsFile(pathfile, ScreenshotImageFormat.Jpeg);
             }
