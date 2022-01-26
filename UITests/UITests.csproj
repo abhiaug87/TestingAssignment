@@ -85,6 +85,7 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Scenarios.feature</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
     <Compile Include="Steps\BaseClass.cs" />
     <Compile Include="Steps\Stepdefinition.cs" />
@@ -100,6 +101,7 @@
     <None Include="Scenarios\Scenarios.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>Scenarios.feature.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
   </ItemGroup>
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
