@@ -12,6 +12,7 @@ namespace UITests.Utilities
     [Binding]
     public class Hooks : BaseClass
     {
+        readonly string currentDirectory = Directory.GetParent(NUnit.Framework.TestContext.CurrentContext.TestDirectory).Parent.FullName;
 
         [BeforeScenario]
         public void BeforeScenario()
@@ -39,12 +40,15 @@ namespace UITests.Utilities
         {
             if (NUnit.Framework.TestContext.CurrentContext.Result.Outcome != ResultState.Success)
             {
-                var p = Directory.GetParent(NUnit.Framework.TestContext.CurrentContext.TestDirectory).Parent.FullName;
-                var dir = $@"{p}/Screenshots";
+                var dir = $@"{currentDirectory}/Screenshots";
                 Directory.CreateDirectory(dir);
-                string pathfile = Path.Combine(p + @"\\Screenshots", "Screenshot" + "_" + DateTime.Now.ToString("(dd_MMMM_hh_mm_ss_tt).JPG"));
+                string pathfile = Path.Combine(currentDirectory + @"//Screenshots", "Screenshot" + "_" + DateTime.Now.ToString("(dd_MMMM_hh_mm_ss_tt).JPG"));
                 var screenshot = Driver.TakeScreenshot();
                 screenshot.SaveAsFile(pathfile, ScreenshotImageFormat.Jpeg);
+            }
+            else
+            {
+                Console.WriteLine("Test has passed");
             }
             Driver.Close();
             Driver.Quit();
