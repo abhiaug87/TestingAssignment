@@ -7,7 +7,7 @@ namespace UITests.Utilities
         public static class DriverSettings
         {
             // running tests on chrome
-            public static string filepath = Path.GetFullPath("Driver"); 
+            public static string filepath = Directory.GetParent(NUnit.Framework.TestContext.CurrentContext.TestDirectory).Parent.FullName + "//Driver//";
             public static string BinaryLocationChrome = filepath;
 
             // running tests on edge
